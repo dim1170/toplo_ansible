@@ -1,0 +1,7 @@
+
+- name:  Get temperature info from toplo.bg 
+  hosts: localhost 
+
+  roles:
+    - toplo
+

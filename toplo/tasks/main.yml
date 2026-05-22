@@ -1,0 +1,24 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for toplo
+
+  - name: Get token
+    ansible.builtin.uri:
+      url: "{{ ApiUrl }}/auth/login"
+      method: POST
+      body: "{{ cred | to_json}}"
+      body_format: json
+    register: out_http
+
+  - name: Collect Info about station
+    ansible.builtin.uri:
+      url: "{{ ApiUrl }}/Stations/GetStationStandartView"
+      headers:
+        Authorization: "Bearer {{ out_http.json.token }}"
+      method: GET
+    register: outHttp
+
+  - name: Display json Info from toplo.bg
+    debug:
+      msg: "Print token: {{ outHttp.json }}"
+

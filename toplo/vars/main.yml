@@ -1,0 +1,7 @@
+#SPDX-License-Identifier: MIT-0
+---
+# vars file for toplo
+    cred:
+      Email: <email> 
+      Password: <password>
+    ApiUrl: https://api.toplo.bg/api
