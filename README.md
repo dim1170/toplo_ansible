@@ -15,6 +15,8 @@ username and password from registration must be added in vars/main.yml
 Dependencies
 ------------
 
+![image](https://github.com/dim1170/toplo_ansible/blob/main/toplo.jpg)
+
 
 Example Playbook
 ----------------
@@ -23,7 +25,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: username.rolename, x: 42 }
+         - { role: toplo }
 
 License
 -------

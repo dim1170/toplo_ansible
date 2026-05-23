@@ -20,5 +20,11 @@
 
   - name: Display json Info from toplo.bg
     debug:
-      msg: "Print token: {{ outHttp.json }}"
+      msg: 
+       - "Адрес: {{ outHttp.json['$values'][0]['name'] }}"  
+       - "Околна температура: {{ outHttp.json['$values'][0]['outsideTemperature'] }} "
+       - "Температура топла вода на входа на блока: {{ outHttp.json['$values'][0]['heatmeterTEmitting'] }}"
+       - "Температура топла вода за парно: {{ outHttp.json['$values'][0]['heatingMeasuredTemperature'] }}"
+       - "Температура топла вода за ВиК: {{ outHttp.json['$values'][0]['domesticHotWaterMeasuredTemperature'] }}"
+
 
